@@ -7,7 +7,7 @@ public class GuessNumber {
 		System.out.println("請輸入數字:");
 
 		Scanner sc = new Scanner(System.in);
-		int answer = (int) (Math.random() * 10); // 1.要自動產生一個0~100的亂數
+		int answer = (int) (Math.random() * 101); // 1.要自動產生一個0~100的亂數
 		int guess = sc.nextInt(); // 2.要可以讓使用者輸入數字
 
 		while (guess != answer) { // 3.比對 系統 vs 使用者 正確就跳出迴圈結束遊戲 錯誤就繼續猜
@@ -21,6 +21,6 @@ public class GuessNumber {
 		if (answer == guess) {
 			System.out.println("答對了! 答案就是" + answer);
 		}
-
+		sc.close();
 	}
 }

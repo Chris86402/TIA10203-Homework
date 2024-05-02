@@ -37,6 +37,6 @@ public class Triangle {
 		} else {
 			System.out.print("不是三角形");
 		}
-
+		sc.close();
 	}
 }
