@@ -15,9 +15,9 @@ public class Lottery {
 			arr[i - 1] = i;
 		}
 
-		if (n < 5) { // 1~4處理方法
+		if (n < 5) { // 使用者輸入1~4處理方法
 			for (int i = 0; i <= 9; i++) {
-				arr[((n * 10) + i) - 1] = 0;
+				arr[((n * 10) + i) - 1] = 0; // ex.n=2 即20~29 值-1為index
 			}
 		}
 
@@ -53,8 +53,8 @@ public class Lottery {
 			}
 
 			if (arr[j] != 0) {
-				myLuckyNumber[i] = arr[j];
-				arr[j] = 0; // 拿出來之後就把它變0
+				myLuckyNumber[i] = arr[j]; // 不為0就放進新陣列
+				arr[j] = 0; // 抽過的元素內容改0 避免重複抽中
 			}
 		}
 		System.out.print("阿文發大財的6個號碼: ");
@@ -62,6 +62,6 @@ public class Lottery {
 		for (int i = 0; i <= myLuckyNumber.length - 1; i++) {
 			System.out.print(myLuckyNumber[i] + " ");
 		}
-
+		sc.close();
 	}
 }
