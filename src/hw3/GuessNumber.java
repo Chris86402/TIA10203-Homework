@@ -2,7 +2,7 @@ package hw3;
 
 import java.util.Scanner;
 
-public class GuessNumber {
+public class GuessNumber { //設計一隻程式，會亂數產生一個0～9的數字，然後可以玩猜數字遊戲，猜錯會顯示錯誤訊息，猜對則顯示正確訊息
 	public static void main(String[] args) {
 		System.out.println("請輸入數字:");
 
