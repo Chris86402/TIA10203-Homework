@@ -3,9 +3,9 @@ package hw3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Lottery {
+public class Lottery { //設計一隻程式，讓阿文可以輸入他不想要的數字(1～9)，並顯示他可以選擇的號碼與總數
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		System.out.println("阿文...請問你討厭哪個數字？");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
@@ -20,7 +20,8 @@ public class Lottery {
 				arr[((n * 10) + i) - 1] = 0; // ex.n=2 即20~29 值-1為index
 			}
 		}
-
+		
+		//ex.n=2 12 22 32 42 都化為0 被排除
 		arr[n - 1] = 0;
 		arr[(n + 10) - 1] = 0;
 		arr[(n + 20) - 1] = 0;
@@ -44,7 +45,7 @@ public class Lottery {
 		}
 		System.out.printf("總共有%d數字可選%n%n", numCount);
 
-		int[] myLuckyNumber = new int[6]; // 進階part
+		int[] myLuckyNumber = new int[6]; // 進階part-輸入不要的數字後，直接亂數印出6個號碼且不得重複
 		for (int i = 0; i <= myLuckyNumber.length - 1; i++) {
 			int j = (int) (Math.random() * 49); // 把random出來的數當作index 0~48
 
