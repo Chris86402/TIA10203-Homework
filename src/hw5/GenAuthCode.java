@@ -1,6 +1,6 @@
 package hw5;
 
-public class GenAuthCode {
+public class GenAuthCode { //設計一個方法，當呼叫此方法時，會回傳一個8位數的驗證碼，此驗證碼內容包含了英文大小寫與數字的亂數組合
 	
 	public void genAuthCode() {
 		for (int i = 0; i < 8; i++) { // 產生8個數字
