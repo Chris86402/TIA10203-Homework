@@ -22,7 +22,7 @@ public class CalTest {
 				System.out.println(e1.getMessage());
 
 			} catch (Exception e) { // 接不住就用爸爸例外手套接.包含輸入格式不正確的InputMismatchException
-				System.out.println("輸入格式不正確");
+				System.err.println("輸入格式不正確"); //標準錯誤輸出資料流
 			}
 		}
 
